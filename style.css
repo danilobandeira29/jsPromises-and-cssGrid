@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    font-family: 'Baloo Da 2', cursive;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+main header input{
+    width: 180px;
+    height: 50px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    margin-right: -3px;
+    outline: none;
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+main header button{
+    height: 50px;
+    width: 60px;
+    border-radius: 0 6px 6px 0 ;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(180, 1, 111);
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+
+h1, span{
+    margin: 5px 0 0 0;
+}
+
+
+h1{
+    color: white;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/*para criar o efeito de loading*/
+.loading{
+    width: 100px;
+	height: 100px;
+	border: 10px solid white;
+	border-radius: 50%;
+	border-bottom-color: rgb(180, 1, 111);
+    animation: spin 1s linear infinite;
+    margin: 10% auto;
+}
+/*para fazer a rotação da box criada no loading, que utilizar spin*/
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+/*REVER overflow está escondendo o texto, porem nao esta colocando ... quando ocorre overflow*/
+.item{
+    padding: 20px;
+    border-radius: 6px;
+    width: 300px;
+    max-width: 300px;
+    height: 250px;
+    background-color: #444;
+    transition: 250ms;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    /*textoverflow*/ 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.item:hover{
+    background-color: rgb(180, 1, 111);
+}
+
+footer{
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    color: white;
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li{
+    list-style: none;
+    display: inline-block;
+}
+footer ul li:nth-child(1){
+    margin-right: 10px;
+}
+
+footer ul li a{
+    color: lightgrey;
+    font-size: 40px;
+}
+
+footer ul li a:hover{
+    color:white;
+}
+
+/*utilizado com conceitos prévios sobre media query*/
+@media (max-width: 1700px){
+    #container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1219px){
+    #container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px){
+    main{
+        width: 500px;
+    }
+    #container{
+        grid-template-columns: 1fr;
+    }
+    .item{
+        width: 80%;
+        height: 230px;
+    }
+}
