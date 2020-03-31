@@ -1,5 +1,5 @@
 <h1> jsPromises-and-cssGrid</h1>
-Aplicação <strong>Front-end</strong> que recebe como valor um usuário do GitHub e busca esse usuário na API do GitHub e retorna os projetos desse usuário com <strong>Nome</strong>, <strong>Descrição</strong> e <strong>Link do repositório</strong>, como pode ser observado no link abaixo:
+Aplicação <strong>Front-end</strong> que recebe como valor um usuário do GitHub e busca esse usuário por meio da API do GitHub e retorna os projetos desse usuário com <strong>Nome</strong>, <strong>Descrição</strong> e <strong>Link do repositório</strong>, como pode ser observado no link abaixo:
 
 <h1>Link</h1>
 <a href="https://youtu.be/Oiv1jQPddGE">Aplicação</a>
